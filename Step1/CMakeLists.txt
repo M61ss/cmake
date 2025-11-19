@@ -25,5 +25,16 @@ add_library(MathFunctions)
 #        MathFunctions target, note that the intended way to include the
 #        MathFunctions header is:
 #          #include <MathFunctions.h>
+target_sources(MathFunctions
+    PRIVATE
+        MathFunctions/MathFunctions.cxx
+
+    PUBLIC
+        FILE_SET HEADERS
+        BASE_DIRS 
+            MathFunctions
+        FILES
+            MathFunctions/MathFunctions.h
+)
 
 # TODO13: Add the MathFunctions subdirectory to the project
